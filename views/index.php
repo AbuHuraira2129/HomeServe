@@ -13,6 +13,7 @@
         <h2>Page Content</h2>
         <p>This is where your page-specific content goes.</p>
     </main>
+    <?php include('C:/xampp/htdocs/Service Link/includes/footer.php'); ?>
 
 </body>
 </html>
