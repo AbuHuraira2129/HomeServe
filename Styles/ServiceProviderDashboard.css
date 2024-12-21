@@ -1,0 +1,248 @@
+/* Global Styles */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f7fa;
+  color: #333;
+}
+
+/* Header */
+.header {
+  background: #f7faff;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 24px;
+  color: #333;
+}
+.logo span {
+  color: #0059ff;
+}
+.nav-links {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+}
+.highlight {
+  color: #007bff;
+}
+.btn-primary {
+  background: #0059ff;
+  color: white !important;
+  padding: 12px 20px;
+  border-radius: 5px;
+  border: none;
+  text-decoration: none;
+  font-size: 16px;
+}
+/* Dashboard Container */
+.dashboard-container {
+  max-width: 800px;
+  margin: 50px auto;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+}
+
+.dashboard-container h1 {
+  font-size: 2rem;
+  color: #4a90e2;
+  margin-bottom: 20px;
+}
+
+.dashboard-container button {
+  background-color: #4a90e2;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dashboard-container button:hover {
+  background-color: #357abd;
+}
+
+/* Services List */
+.services-list {
+  margin-top: 30px;
+}
+
+.services-list h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.services-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.services-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f5f7fa;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.services-list li:hover {
+  background-color: #e6effa;
+}
+
+.services-list button {
+  background-color: #ffd700;
+  color: #333;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.services-list button:hover {
+  background-color: #f4c10f;
+}
+
+footer {
+  background: #f9f9f9;
+  padding: 40px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer-main {
+  max-width: 1200px;
+}
+.footer-container {
+  max-width: 1200px !important;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0px;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+.footer-brand {
+  width: 100%;
+}
+.footer-brand h3 span {
+  color: #007bff;
+}
+.footerLinks {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.footer-links ul {
+  list-style: none;
+  line-height: 1.8;
+}
+.footer-links ul li a {
+  text-decoration: none;
+  color: #333;
+}
+.footer-newsletter {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.footer-newsletter form {
+  display: flex;
+  gap: 10px;
+}
+.footer-newsletter input {
+  flex: 1;
+  padding: 15px 10px;
+  margin-bottom: 15px;
+  border: none;
+  background-color: #ffffff;
+  border-radius: 12px;
+  border: 1px solid gray;
+}
+
+.NewsletterSubmitButton {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  border: none;
+  background-color: #0059ff;
+  color: white;
+}
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  background-color: white;
+  display: flex;
+  border-radius: 20px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+}
+
+/* Wrapper styles */
+.option-field {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Options container */
+.options {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+/* Button styles */
+.option {
+  width: 100%;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  background-color: white;
+  color: #555;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.option.active {
+  border-color: #007bff;
+  color: #007bff;
+}
+
+.option:hover {
+  background-color: #f0f0f0;
+}
+

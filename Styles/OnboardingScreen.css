@@ -1,0 +1,162 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Inter, sans-serif;
+  line-height: 1.6;
+}
+
+.header {
+  background: #f7faff;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 24px;
+  color: #333;
+}
+.logo span {
+  color: #0059ff;
+}
+.nav-links {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+}
+.highlight {
+  color: #007bff;
+}
+.btn-primary {
+  background: #0059ff;
+  color: white !important;
+  padding: 12px 20px;
+  border-radius: 5px;
+  border: none;
+  text-decoration: none;
+  font-size: 16px;
+}
+footer {
+  background: #f9f9f9;
+  padding: 40px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer-main {
+  max-width: 1200px;
+}
+.footer-container {
+  max-width: 1200px !important;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0px;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+.footer-brand {
+  width: 100%;
+}
+.footer-brand h3 span {
+  color: #007bff;
+}
+.footerLinks {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.footer-links ul {
+  list-style: none;
+  line-height: 1.8;
+}
+.footer-links ul li a {
+  text-decoration: none;
+  color: #333;
+}
+.footer-newsletter {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.footer-newsletter form {
+  display: flex;
+  gap: 10px;
+}
+.footer-newsletter input {
+  flex: 1;
+  padding: 15px 10px;
+  margin-bottom: 15px;
+  border: none;
+  background-color: #ffffff;
+  border-radius: 12px;
+  border: 1px solid gray;
+}
+
+.NewsletterSubmitButton {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  border: none;
+  background-color: #0059ff;
+  color: white;
+}
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  background-color: white;
+  display: flex;
+  border-radius: 20px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+}
+
+.onboarding-screen {
+  display: none;
+}
+
+.onboarding-screen.active {
+  height: 500px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.stepIcon {
+  display: flex;
+  width: 56px;
+  height: 56px;
+  border-radius: 100px;
+  background-color: #0059ff;
+  color: white;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.btn-primary {
+  background: #0059ff;
+  color: white !important;
+  padding: 12px 20px;
+  border-radius: 5px;
+  border: none;
+  text-decoration: none;
+  font-size: 16px;
+}

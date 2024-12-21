@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add New Service</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <h1 class="logo">Home<span>Serve</span></h1>
+        <s></s>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Sell a Service</a></li>
+            <li><a href="#" class="highlight">Login/Signup</a></li>
+            <li><a href="#" class="btn-primary">Book a Service</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="add-service-container">
+      <h1>Add New Service</h1>
+      <form id="addServiceForm">
+        <input type="text" placeholder="Service Name" required />
+        <textarea placeholder="Service Description" required></textarea>
+        <input type="number" placeholder="Service Price ($)" required />
+        <button type="button" onclick="previewService()">Preview</button>
+        <button type="submit">Publish</button>
+      </form>
+    </div>
+
+    <script>
+      function previewService() {
+        alert("Previewing service...");
+      }
+
+      const addServiceForm = document.getElementById("addServiceForm");
+      addServiceForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        alert("Service Published Successfully!");
+        window.location.href = "dashboard.html";
+      });
+    </script>
+  </body>
+</html>

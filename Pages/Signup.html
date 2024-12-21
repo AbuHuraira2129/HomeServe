@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HomeServe - Signup</title>
+    <link rel="stylesheet" href="../Styles/Signup.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <style>
+      .error-message {
+        color: red;
+        font-size: 0.9rem;
+        margin-top: 5px;
+      }
+      .input-error {
+        border-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <h1 class="logo">Home<span>Serve</span></h1>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Sell a Service</a></li>
+            <li><a href="#" class="highlight">Login/Signup</a></li>
+            <li><a href="#" class="btn-primary">Book a Service</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="login-section">
+        <div class="login-container">
+          <div class="login-image">
+            <img
+              src="../Images/LoginSupportingImg.png"
+              alt="Professional Worker"
+            />
+          </div>
+          <div class="login-form">
+            <h2>Welcome Back! Log in to <span>HomeServe</span>.</h2>
+            <form id="signupForm" novalidate>
+              <label for="name">Full Name</label>
+              <input
+                type="text"
+                id="name"
+                placeholder="Enter your Full Name"
+                required
+              />
+              <p class="error-message" id="nameError"></p>
+
+              <label for="email">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="Enter your Email"
+                required
+              />
+              <p class="error-message" id="emailError"></p>
+
+              <label class="PasswordLabel" for="password">
+                <p>Password</p>
+                <a href="#">Forgot Password?</a>
+              </label>
+              <input
+                type="password"
+                id="password"
+                placeholder="Enter your password"
+                required
+                minlength="6"
+              />
+              <p class="error-message" id="passwordError"></p>
+
+              <div class="option-field">
+                <label>Are you a?</label>
+                <div class="options">
+                  <button
+                    class="option active"
+                    id="customer"
+                    type="button"
+                    onclick="selectOption('customer')"
+                  >
+                    Customer
+                  </button>
+                  <button
+                    class="option"
+                    id="serviceProvider"
+                    type="button"
+                    onclick="selectOption('serviceProvider')"
+                  >
+                    Service Provider
+                  </button>
+                </div>
+              </div>
+              <input type="hidden" id="role" name="role" value="customer" />
+
+              <input type="submit" class="btn-primary" value="Signup" />
+            </form>
+            <p class="orLoginWith">Or Signup with</p>
+            <div class="social-login">
+              <button class="btn-google" aria-label="Signup with Google">
+                Google
+                <img
+                  width="24px"
+                  src="../Images/devicon_google.png"
+                  alt="Google"
+                />
+              </button>
+              <button class="btn-facebook" aria-label="Signup with Facebook">
+                Facebook
+                <img
+                  width="24px"
+                  src="../Images/logos_facebook.png"
+                  alt="Facebook"
+                />
+              </button>
+            </div>
+            <hr class="divider" />
+            <p>Already have an account? <a href="#">Login</a></p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-main">
+        <p>© 2024 HomeServe. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      const signupForm = document.getElementById("signupForm");
+
+      signupForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        let isValid = true;
+
+        // Validate Name
+        const nameField = document.getElementById("name");
+        const nameError = document.getElementById("nameError");
+        if (!nameField.value.trim()) {
+          isValid = false;
+          nameField.classList.add("input-error");
+          nameError.textContent = "Full name is required.";
+        } else {
+          nameField.classList.remove("input-error");
+          nameError.textContent = "";
+        }
+
+        // Validate Email
+        const emailField = document.getElementById("email");
+        const emailError = document.getElementById("emailError");
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailField.value.trim()) {
+          isValid = false;
+          emailField.classList.add("input-error");
+          emailError.textContent = "Email address is required.";
+        } else if (!emailRegex.test(emailField.value.trim())) {
+          isValid = false;
+          emailField.classList.add("input-error");
+          emailError.textContent = "Please enter a valid email address.";
+        } else {
+          emailField.classList.remove("input-error");
+          emailError.textContent = "";
+        }
+
+        // Validate Password
+        const passwordField = document.getElementById("password");
+        const passwordError = document.getElementById("passwordError");
+        if (!passwordField.value.trim()) {
+          isValid = false;
+          passwordField.classList.add("input-error");
+          passwordError.textContent = "Password is required.";
+        } else if (passwordField.value.length < 6) {
+          isValid = false;
+          passwordField.classList.add("input-error");
+          passwordError.textContent = "Password must be at least 6 characters.";
+        } else {
+          passwordField.classList.remove("input-error");
+          passwordError.textContent = "";
+        }
+
+        // Validate Role Selection
+        const role = document.getElementById("role").value;
+        if (!role) {
+          isValid = false;
+          alert("Please select a role before proceeding!");
+        }
+
+        // Proceed only if all fields are valid
+        if (isValid) {
+          if (role === "customer") {
+            alert("Customer signup successful!");
+            window.location.reload(); // Redirect for customer
+          } else if (role === "serviceProvider") {
+            alert("Service Provider signup successful!");
+            window.location.href = "OnboardingScreen.html"; // Redirect for service provider
+          }
+        }
+      });
+
+      function selectOption(optionId) {
+        document.querySelectorAll(".option").forEach((button) => {
+          button.classList.remove("active");
+        });
+
+        const selectedButton = document.getElementById(optionId);
+        if (selectedButton) {
+          selectedButton.classList.add("active");
+        }
+
+        // Set the value of the hidden input field to the selected option ID
+        document.getElementById("role").value = optionId;
+      }
+    </script>
+  </body>
+</html>

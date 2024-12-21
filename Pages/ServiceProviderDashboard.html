@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../Styles/ServiceProviderDashboard.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <h1 class="logo">Home<span>Serve</span></h1>
+        <s></s>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Sell a Service</a></li>
+            <li><a href="#" class="highlight">Login/Signup</a></li>
+            <li><a href="#" class="btn-primary">Book a Service</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="sidebar">
+      <div class="logo">Home<span>Serve</span></div>
+      <ul class="nav-links">
+        <li><a href="#">My Services</a></li>
+        <li><a href="#">Settings</a></li>
+      </ul>
+    </div>
+    <div class="main-content">
+      <div class="dashboard-container">
+        <h1>Welcome to Your Dashboard</h1>
+        <button onclick="addNewService()">Add New Service</button>
+        <div class="services-list">
+          <h2>Your Services</h2>
+          <ul>
+            <li>Service 1 - <button>Manage</button></li>
+            <li>Service 2 - <button>Manage</button></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-main">
+        <div class="footer-container">
+          <div class="footer-brand">
+            <h3>Home<span>Serve</span></h3>
+            <p>
+              Connecting you with skilled professionals for trusted home
+              services. Convenient, reliable, and secure.
+            </p>
+          </div>
+          <div class="footerLinks">
+            <div class="footer-links">
+              <h4>Quick Links</h4>
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+            <div class="footer-links">
+              <h4><br /></h4>
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-newsletter">
+            <h4>Newsletter</h4>
+            <p>
+              Connecting you with skilled professionals for trusted home
+              services. Convenient, reliable, and secure.
+            </p>
+            <form>
+              <input type="email" placeholder="Enter your Email" />
+              <button class="NewsletterSubmitButton" type="submit">✔</button>
+            </form>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2024 <span>HomeServe</span>. All rights reserved.</p>
+          <p>+92-303-922-1000 • info@HomeServe.com</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function addNewService() {
+        window.location.href = "add-service.html";
+      }
+    </script>
+  </body>
+</html>
