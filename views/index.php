@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <?php include('C:/xampp/htdocs/Service Link/includes/header.php'); ?>
 
     <main>
         <h2>Page Content</h2>
