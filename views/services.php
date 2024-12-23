@@ -1,46 +1,45 @@
 <?php
-include('C:/xampp/htdocs/Service Link/controllers/serviceCategoryController.php');
+// Include necessary files
+include('C:/xampp/htdocs/Service Link/controllers/serviceController.php');
+include('C:/xampp/htdocs/Service Link/includes/serviceCard.php');
 
-$services = getAllServiceCategories();
 
+
+// Fetch all services for the given category ID
+$services = getServicesByCategoryId(4);
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Top Services</title>
+    <title>Services</title>
     <link rel="stylesheet" href="../assets/css/services.css">
 </head>
 <body>
-
     <?php include('C:/xampp/htdocs/Service Link/includes/header.php'); ?>
 
     <main>
-        <!-- Hero Section -->
-        <div class="hero">
-                <h1>Find the Right Service for Your Needs</h1>
-                <p>Browse our wide range of professional home services, from plumbing to beauty care, and book in just a few clicks.</p>
-            
-        </div>
+        <h1>Services in Category ID: <?php echo htmlspecialchars(4); ?></h1>
 
-        <!-- Top Services Section -->
-        <section class="all-services">
-            <h2>Top Services</h2>
-            <div class="service-container">
-                <?php
+        <div class="services-container">
+            <?php
+            if (count($services) > 0) {
                 foreach ($services as $service) {
-                    include('C:/xampp/htdocs/Service Link/includes/categoryCard.php');
+                    renderSingleServiceCard(
+                        $service->serviceName,
+                        4.5, // Assuming static rating for demo
+                        "../Images/service_default.png" // Placeholder image
+                    );
                 }
-                ?>
-            </div>
-        </section>
-
+            } else {
+                echo "<p>No services found for this category.</p>";
+            }
+            ?>
+        </div>
     </main>
 
     <?php include('C:/xampp/htdocs/Service Link/includes/footer.php'); ?>
-
 </body>
 </html>
-
-<link rel="stylesheet" href="../assets/css/serviceCard.css">
