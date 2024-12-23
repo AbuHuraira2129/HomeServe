@@ -1,9 +1,21 @@
-<link rel="stylesheet" href="../assets/css/serviceCard.css">
+<?php
 
-<div class="service-card">
-    <img src="<?php echo $service->categoryImage; ?>" alt="<?php echo $service->categoryName; ?>" />
-    <h3><?php echo $service->categoryName; ?></h3>
-    <button onclick="location.href='services.php?id=<?php echo $service->categoryId; ?>'">Explore</button>
-</div>
+function renderSingleServiceCard($serviceName, $rating, $serviceImage) {
+    ?>
+    <link rel="stylesheet" href="../assets/css/serviceCard.css" />
 
+    <div class="service-card">
+        <div class="service-image">
+            <img src="<?php echo htmlspecialchars($serviceImage); ?>" alt="Service Image" />
+        </div>
+        <div class="service-info">
+            <h3 class="service-name"><?php echo htmlspecialchars($serviceName); ?></h3>
+            <div class="service-rating">
+                <span class="rating"><?php echo htmlspecialchars($rating); ?> Rating</span>
+            </div>
+        </div>
+    </div>
+    <?php
+}
 
+?>

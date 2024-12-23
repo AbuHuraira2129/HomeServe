@@ -1,7 +1,7 @@
 <?php
 include('C:/xampp/htdocs/Service Link/controllers/serviceCategoryController.php');
 
-$services = getTopServiceCategories();
+$services = getAllServiceCategories();
 
 ?>
 <!DOCTYPE html>
@@ -10,7 +10,7 @@ $services = getTopServiceCategories();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Top Services</title>
-    <link rel="stylesheet" href="../assets/css/index.css">
+    <link rel="stylesheet" href="../assets/css/services.css">
 </head>
 <body>
 
@@ -19,18 +19,13 @@ $services = getTopServiceCategories();
     <main>
         <!-- Hero Section -->
         <div class="hero">
-            <div class="heroLeft">
-                <h1>Welcome to Home ServiceLink</h1>
-                <p>Your trusted platform to connect with skilled professionals for all your home service needs.</p>
-                <button class="cta-btn" onclick="window.location.href='catagories.php';">Explore Services</button>
-            </div>
-            <div class="heroRight">
-                <img class="heroImage" src="../assets/images/hero.png" alt="Hero Image">
-            </div>
+                <h1>Find the Right Service for Your Needs</h1>
+                <p>Browse our wide range of professional home services, from plumbing to beauty care, and book in just a few clicks.</p>
+            
         </div>
 
         <!-- Top Services Section -->
-        <section class="top-services">
+        <section class="all-services">
             <h2>Top Services</h2>
             <div class="service-container">
                 <?php
