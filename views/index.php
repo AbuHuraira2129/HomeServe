@@ -1,7 +1,7 @@
 <?php
 include('C:/xampp/htdocs/Service Link/controllers/serviceCategoryController.php');
 
-$services = getServiceCategories();
+$services = getTopServiceCategories();
 
 ?>
 <!DOCTYPE html>
