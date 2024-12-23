@@ -3,10 +3,15 @@
 include('C:/xampp/htdocs/Service Link/controllers/serviceController.php');
 include('C:/xampp/htdocs/Service Link/includes/serviceCard.php');
 
+// Get the category ID from the URL (e.g., services.php?category_id=1)
+$categoryId = isset($_GET['category_id']) ? (int)$_GET['category_id'] : 0;
 
-
+if ($categoryId <= 0) {
+    echo "Invalid category ID!";
+    exit;
+}
 // Fetch all services for the given category ID
-$services = getServicesByCategoryId(4);
+$services = getServicesByCategoryId($categoryId);
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +26,7 @@ $services = getServicesByCategoryId(4);
     <?php include('C:/xampp/htdocs/Service Link/includes/header.php'); ?>
 
     <main>
-        <h1>Services in Category ID: <?php echo htmlspecialchars(4); ?></h1>
+        <h1>Services in Category: <?php echo htmlspecialchars($categoryId); ?></h1>
 
         <div class="services-container">
             <?php
@@ -29,8 +34,8 @@ $services = getServicesByCategoryId(4);
                 foreach ($services as $service) {
                     renderSingleServiceCard(
                         $service->serviceName,
-                        4.5, // Assuming static rating for demo
-                        "../Images/service_default.png" // Placeholder image
+                        $service->availability,// Assuming static rating for demo
+                        $service->serviceImage, // Placeholder image
                     );
                 }
             } else {
