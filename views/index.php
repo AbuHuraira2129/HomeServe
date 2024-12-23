@@ -35,7 +35,7 @@ $services = getTopServiceCategories();
             <div class="service-container">
                 <?php
                 foreach ($services as $service) {
-                    include('C:/xampp/htdocs/Service Link/includes/serviceCard.php');
+                    include('C:/xampp/htdocs/Service Link/includes/categoryCard.php');
                 }
                 ?>
             </div>
