@@ -1,7 +1,7 @@
 <?php
 
-include('C:/xampp/htdocs/Service Link/includes/db.php'); 
-include('C:/xampp/htdocs/Service Link/models/ServiceCategoryModel.php');
+include('C:/xampp/htdocs/HomeServe/includes/db.php'); 
+include('C:/xampp/htdocs/HomeServe/models/ServiceCategoryModel.php');
 
 function getTopServiceCategories() {
     global $conn;

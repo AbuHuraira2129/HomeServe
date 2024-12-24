@@ -1,5 +1,5 @@
 <?php
-include('C:/xampp/htdocs/Service Link/controllers/serviceCategoryController.php');
+include('C:/xampp/htdocs/HomeServe/controllers/serviceCategoryController.php');
 
 $services = getTopServiceCategories();
 
@@ -14,7 +14,7 @@ $services = getTopServiceCategories();
 </head>
 <body>
 
-    <?php include('C:/xampp/htdocs/Service Link/includes/header.php'); ?>
+    <?php include('C:/xampp/htdocs/HomeServe/includes/header.php'); ?>
 
     <main>
         <!-- Hero Section -->
@@ -35,7 +35,7 @@ $services = getTopServiceCategories();
             <div class="service-container">
                 <?php
                 foreach ($services as $service) {
-                    include('C:/xampp/htdocs/Service Link/includes/serviceCard.php');
+                    include('C:/xampp/htdocs/HomeServe/includes/serviceCard.php');
                 }
                 ?>
             </div>
@@ -43,7 +43,7 @@ $services = getTopServiceCategories();
 
     </main>
 
-    <?php include('C:/xampp/htdocs/Service Link/includes/footer.php'); ?>
+    <?php include('C:/xampp/htdocs/HomeServe/includes/footer.php'); ?>
 
 </body>
 </html>
