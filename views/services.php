@@ -26,16 +26,16 @@ $services = getServicesByCategoryId($categoryId);
     <?php include('C:/xampp/htdocs/Service Link/includes/header.php'); ?>
 
     <main>
-        <h1>Services in Category: <?php echo htmlspecialchars($categoryId); ?></h1>
+        <h1>Aavalible Services</h1>
 
-        <div class="services-container">
+        <div class="service-container">
             <?php
             if (count($services) > 0) {
                 foreach ($services as $service) {
                     renderSingleServiceCard(
                         $service->serviceName,
-                        $service->availability,// Assuming static rating for demo
-                        $service->serviceImage, // Placeholder image
+                        $service->availability,
+                        $service->serviceImage, 
                     );
                 }
             } else {
