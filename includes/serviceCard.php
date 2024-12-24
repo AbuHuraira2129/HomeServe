@@ -11,7 +11,7 @@ function renderSingleServiceCard($serviceName, $rating, $serviceImage) {
         <div class="service-info">
             <h3 class="service-name"><?php echo htmlspecialchars($serviceName); ?></h3>
             <div class="service-rating">
-                <span class="rating"><?php echo htmlspecialchars($rating); ?> Rating</span>
+                <span class="rating"><?php echo htmlspecialchars($rating); ?></span>
             </div>
         </div>
     </div>
