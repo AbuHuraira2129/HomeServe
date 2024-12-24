@@ -22,7 +22,7 @@ $services = getTopServiceCategories();
             <div class="heroLeft">
                 <h1>Welcome to Home ServiceLink</h1>
                 <p>Your trusted platform to connect with skilled professionals for all your home service needs.</p>
-                <button class="cta-btn" onclick="window.location.href='services.php';">Explore Services</button>
+                <button class="cta-btn" onclick="window.location.href='catagories.php';">Explore Services</button>
             </div>
             <div class="heroRight">
                 <img class="heroImage" src="../assets/images/hero.png" alt="Hero Image">
