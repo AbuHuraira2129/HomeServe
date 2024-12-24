@@ -5,7 +5,7 @@
         <h1 class="logo">Home<span>Serve</span></h1>
         <nav>
           <ul class="nav-links">
-            <li><a href="/Service%20Link/views/index.php">Home</a></li>
+            <li><a href="/HomeServe/views/index.php">Home</a></li>
             <li><a href="/Service%20Link/views/catagories.php">Catagories</a></li>
             <li><a href="#">About Us</a></li>
             <li><a href="#">Contact</a></li>
